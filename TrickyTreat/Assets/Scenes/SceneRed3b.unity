@@ -318,7 +318,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 371612756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840e4150e4b4a5c43babea930c54da03, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5faa93bca7c77438c05b29dbb99914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
@@ -603,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneRed3aDialogue, Assembly-CSharp
+      value: SceneRed3bDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1231,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneRed3aDialogue, Assembly-CSharp
+      value: SceneRed3bDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1354,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8304379551601624936, guid: 6b07b5733103c204abce727850706eda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneRed3aDialogue, Assembly-CSharp
+      value: SceneRed3bDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8304379551601624936, guid: 6b07b5733103c204abce727850706eda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1481,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneRed3aDialogue, Assembly-CSharp
+      value: SceneRed3bDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8463736628883721446, guid: 51f198fff44fb1142b9a8135caaeb1c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
