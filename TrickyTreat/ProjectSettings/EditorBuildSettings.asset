@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fca9302050ac3af408d572fccf71cda4
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/SHGhostHouse.unity
+    guid: 74996e583ef1d5244b24e3f0d7d6bd8d
+  - enabled: 1
+    path: Assets/Scenes/BadEndDeath1.unity
+    guid: f619a065486040147aae5961e432bcec
+  - enabled: 1
+    path: Assets/Scenes/EndWin.unity
+    guid: 4388b62f7131042b3a16b4c91b6fb9f5
   m_configObjects: {}
