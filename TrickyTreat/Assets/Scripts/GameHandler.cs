@@ -7,7 +7,10 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-        public static int playerStat;
+        public static int candy;
+		public static bool isSuper = false;
+		public static bool isGhost = false;
+		public static bool isWolf = false;
 
 
         public static bool GameisPaused = false;
@@ -56,15 +59,6 @@ public class GameHandler : MonoBehaviour {
         public void SetLevel (float sliderValue){
                 mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
                 volumeLevel = sliderValue;
-        }
-
-        public void UpdatePlayerStat(int amount){
-                playerStat += amount;
-                Debug.Log("Current Player Stat = " + playerStat);
-        }
-
-        public int CheckPlayerStat(){
-                return playerStat;
         }
 
         public void StartGame(){
