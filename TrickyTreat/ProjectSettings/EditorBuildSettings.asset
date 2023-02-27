@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene2.unity
     guid: cf4ff1b2a80f14c41b1a6c3d80965724
   - enabled: 1
+    path: Assets/Scenes/Scene3a.unity
+    guid: 81e55bf639a975145a8fac212d66b5f5
+  - enabled: 1
     path: Assets/Scenes/SHGhostHouse.unity
     guid: 74996e583ef1d5244b24e3f0d7d6bd8d
   - enabled: 1
@@ -27,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneRed3b.unity
     guid: 3089f531c5c86a647afd497112e600d8
   - enabled: 1
-    path: Assets/Scenes/End_Lose.unity
+    path: Assets/Scenes/DEATH.unity
     guid: f619a065486040147aae5961e432bcec
   - enabled: 1
     path: Assets/Scenes/End_Win.unity

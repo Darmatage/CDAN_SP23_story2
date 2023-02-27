@@ -96,33 +96,33 @@ public void next(){
         else if (primeInt == 2){
                ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
+                Char1name.text = "YOU";
+                Char1speech.text = "Where are we? I thought you said we were going trick or treating?";
+                Char2name.text = "";
+                Char2speech.text = "";
+        }
+       else if (primeInt ==3){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
-                Char2speech.text = "Hey squirt, get your costume on, we're leaving soon.";
-        }
-       else if (primeInt ==3){
-                Char1name.text = "YOU";
-                Char1speech.text = "What are you talking about, I thought mom was taking me trick or treating?";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2speech.text = "Change of plans pip squeak.";
         }
        else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
-                Char2speech.text = "Mom had to go and get more candy to hand out.";
+                Char2speech.text = "You’re old enough to trick or treat on your own.";
         }
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
-                Char2speech.text = "Which means she dumped you on me.";
+                Char2speech.text = "I'm heading to a party. Don’t get into any trouble, and don't tell mom.";
         }
 		
 		else if (primeInt == 6){
                 Char1name.text = "YOU";
-                Char1speech.text = "(But I want mom...)";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
@@ -137,23 +137,22 @@ public void next(){
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "SIBLING";
-             Char2speech.text = "No need for an attitude, I didn't choose this either";
+             Char2speech.text = "That's the spirit. I'll pick you up after the party.";
 			primeInt = 39;
 		}
-		
 		
 		//response to choice 1b
 		else if (primeInt==30){
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "SIBLING";
-             Char2speech.text = "Ugh, you're getting on my last nerve!";
+             Char2speech.text = "If you tell mom I’ll pummel you so hard you’ll never see another halloween again!";
 		}
 		else if (primeInt==31){
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "SIBLING";
-             Char2speech.text = "She told me to take you! That's it.";
+             Char2speech.text = "Man the parties gonna start soon, I'm going to be late.";
 			primeInt = 39;
 		}
 		
@@ -164,15 +163,23 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
-                Char2speech.text = " Mom left my old costumes in your closet.";
+                Char2speech.text = "See ya squirt.";
+				// Turn off "Next" button, turn on "Choice" buttons
+				ArtChar1a.SetActive(false);
+                DialogueDisplay.SetActive(false);
+                nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene1Button.SetActive(true);
+				NextScene2Button.SetActive(true);
+				// NextScene3Button.SetActive(true);
         }
-       else if (primeInt ==41){
-                Char1name.text = "YOU";
-                Char1speech.text = "WOAH!";
-                Char2name.text = "";
-                Char2speech.text = "";
-				primeInt = 49;
-        }
+       // else if (primeInt ==41){
+                // Char1name.text = "YOU";
+                // Char1speech.text = "WOAH!";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+				// primeInt = 49;
+        // }
        // else if (primeInt == 42){
                 // Char1name.text = "";
                 // Char1speech.text = "";
@@ -187,70 +194,70 @@ public void next(){
         // }
 		
 	// after choice 2 is complete		
-		 else if (primeInt == 50){
-			ArtChar1a.SetActive(false);
-			ArtChar1b.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
+		 // else if (primeInt == 50){
+			// ArtChar1a.SetActive(false);
+			// ArtChar1b.SetActive(true);
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "SIBLING";
 						
-			if (GameHandler.isSuper == true){
-			Char2speech.text = "Ok, Superface. Try not get to get kidnapped.";
-			}
-			if (GameHandler.isGhost == true){
-			Char2speech.text = "Alright, sheets-a-lot. See you when I see you.";
-			}
-			if (GameHandler.isWolf == true){
-			Char2speech.text = "Alright, fuzzy. Don't forget-- I get half your candy.";
-			}
-		}
+			// if (GameHandler.isSuper == true){
+			// Char2speech.text = "Ok, Superface. Try not get to get kidnapped.";
+			// }
+			// if (GameHandler.isGhost == true){
+			// Char2speech.text = "Alright, sheets-a-lot. See you when I see you.";
+			// }
+			// if (GameHandler.isWolf == true){
+			// Char2speech.text = "Alright, fuzzy. Don't forget-- I get half your candy.";
+			// }
+		// }
 		 
-       else if (primeInt ==51){
-		   ArtChar1b.SetActive(false);
-                Char1name.text = "YOU";
-                Char1speech.text = "Huh. Which house should I try first?";
-                Char2name.text = "";
-                Char2speech.text = "";
+       // else if (primeInt ==51){
+		   // ArtChar1b.SetActive(false);
+                // Char1name.text = "YOU";
+                // Char1speech.text = "Huh. Which house should I try first?";
+                // Char2name.text = "";
+                // Char2speech.text = "";
 		 
 				// Turn off "Next" button, turn on "Choice" buttons
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene1Button.SetActive(true);
-				NextScene2Button.SetActive(true);
-				NextScene3Button.SetActive(true);
-        }
+                // nextButton.SetActive(false);
+                // allowSpace = false;
+                // NextScene1Button.SetActive(true);
+				// NextScene2Button.SetActive(true);
+				// NextScene3Button.SetActive(true);
+        // }
 
 // ENCOUNTER AFTER CHOICE #2
-       else if (primeInt == 300){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
-                Char2speech.text = "Wait 'til you hit puberty, atomic face.";
-				primeInt=49;
-        }
+       // else if (primeInt == 300){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "SIBLING";
+                // Char2speech.text = "Wait 'til you hit puberty, atomic face.";
+				// primeInt=49;
+        // }
 
-		else if (primeInt == 400){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
-				Char2speech.text = "Oh, wow. SO scary.";
-	   }
-	   		else if (primeInt == 401){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
-				Char2speech.text = "Cut it out, twerp.";
-				primeInt=49;
-	   }
+		// else if (primeInt == 400){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "SIBLING";
+				// Char2speech.text = "Oh, wow. SO scary.";
+	   // }
+	   		// else if (primeInt == 401){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "SIBLING";
+				// Char2speech.text = "Cut it out, twerp.";
+				// primeInt=49;
+	   // }
 		
 		
-       else if (primeInt == 500){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
-				Char2speech.text = "Sure, twerp. Just not in front of my friends.";
-				primeInt=49;
-	   }
+       // else if (primeInt == 500){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "SIBLING";
+				// Char2speech.text = "Sure, twerp. Just not in front of my friends.";
+				// primeInt=49;
+	   // }
 
 		
 	// never delete the bracket below here. it en ds the next() function!:
@@ -259,7 +266,7 @@ public void next(){
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "Fine, let me just get my costume on.";
+                Char1speech.text = "Yeah I am old enough!";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 19;
@@ -270,7 +277,7 @@ public void next(){
         }
         public void Choice1bFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "No way, I want mom to take me.";
+                Char1speech.text = "No fair! I'm telling mom!";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 29;
