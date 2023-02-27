@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene3a.unity
     guid: 81e55bf639a975145a8fac212d66b5f5
   - enabled: 1
+    path: Assets/Scenes/Scene3b.unity
+    guid: b272cab659cfc7d4b911b2735f298fa1
+  - enabled: 1
     path: Assets/Scenes/SHGhostHouse.unity
     guid: 74996e583ef1d5244b24e3f0d7d6bd8d
   - enabled: 1
