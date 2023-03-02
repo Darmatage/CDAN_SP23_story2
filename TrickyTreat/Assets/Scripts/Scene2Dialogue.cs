@@ -172,6 +172,7 @@ public void next(){
                 Char2speech.text = "See ya squirt.";
 				// Turn off "Next" button, turn on "Choice" buttons
 				ArtChar1a.SetActive(false);
+				ArtChar1b.SetActive(false);
                 DialogueDisplay.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
