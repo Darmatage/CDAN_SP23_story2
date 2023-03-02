@@ -18,6 +18,7 @@ public class Scene3cDialogue : MonoBehaviour {
        public GameObject ArtChar1b;
        public GameObject ArtChar1c;
 	    public GameObject ArtChar1d;
+		public GameObject ArtChar1e;
         public GameObject ArtBG1;
 		//public GameObject ArtBG2;
 		public GameObject FrameSuper;
@@ -48,6 +49,7 @@ void Start(){
 		ArtChar1b.SetActive(false);
 		ArtChar1c.SetActive(false);
 		ArtChar1d.SetActive(false);
+		ArtChar1e.SetActive(false);
 		
         ArtBG1.SetActive(true);
 		//ArtBG2.SetActive(false);
@@ -175,12 +177,16 @@ public void next(){
                 Char2speech.text = "Hey little dude! Drinks are on the table, take what you want.";
 		}
 		else if (primeInt == 102){
+				ArtChar1a.SetActive(false);
+				ArtChar1e.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
                 Char2speech.text = "Oh wait, you're a kid! Sorry kid, uh what do you want? Candy? I think I’ve got some candy here.";
 		}
 				else if (primeInt == 103){
+				ArtChar1a.SetActive(true);
+				ArtChar1e.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -197,6 +203,8 @@ public void next(){
 		
 		//response to choice 1a
 		else if (primeInt==20){
+				ArtChar1a.SetActive(false);
+				ArtChar1e.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "PARTY GUY";
@@ -209,7 +217,7 @@ public void next(){
              Char2speech.text = "";
 		}
 		else if (primeInt==22){
-				ArtChar1a.SetActive(false);
+				ArtChar1e.SetActive(false);
 				ArtChar1b.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
@@ -226,13 +234,15 @@ public void next(){
              Char2speech.text = "";
 		}
 		else if (primeInt==31){
+				ArtChar1a.SetActive(false);
+				ArtChar1e.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "PARTY GUY";
              Char2speech.text = "Kid I'm not wearing any costume...";
 		}
 		else if (primeInt==32){
-			ArtChar1a.SetActive(false);
+			ArtChar1e.SetActive(false);
 			ArtChar1b.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
@@ -254,6 +264,8 @@ public void next(){
 			
 			//Response to choice 2b
 			else if (primeInt==400){
+				ArtChar1a.SetActive(false);
+				ArtChar1e.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "PARTY GUY";
@@ -356,6 +368,7 @@ public void next(){
 		else if (primeInt == 350){
 				ArtChar1a.SetActive(true);
 				ArtChar1d.SetActive(false);
+				ArtChar1e.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
@@ -393,6 +406,8 @@ public void next(){
 			}
 		// choice 3a response
        else if (primeInt == 1100){
+		   				ArtChar1a.SetActive(false);
+						ArtChar1e.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
