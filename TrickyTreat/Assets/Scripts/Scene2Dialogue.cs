@@ -114,6 +114,8 @@ public void next(){
                 Char2speech.text = "You’re old enough to trick or treat on your own.";
         }
        else if (primeInt == 5){
+		   ArtChar1a.SetActive(false);
+		   ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -143,12 +145,16 @@ public void next(){
 		
 		//response to choice 1b
 		else if (primeInt==30){
+			ArtChar1a.SetActive(true);
+		   ArtChar1b.SetActive(false);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "SIBLING";
              Char2speech.text = "If you tell mom I’ll pummel you so hard you’ll never see another halloween again!";
 		}
 		else if (primeInt==31){
+			ArtChar1a.SetActive(true);
+		   ArtChar1b.SetActive(false);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "SIBLING";
@@ -171,7 +177,7 @@ public void next(){
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
 				NextScene2Button.SetActive(true);
-				// NextScene3Button.SetActive(true);
+				NextScene3Button.SetActive(true);
         }
        // else if (primeInt ==41){
                 // Char1name.text = "YOU";
