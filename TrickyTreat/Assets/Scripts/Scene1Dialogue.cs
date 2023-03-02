@@ -95,12 +95,16 @@ public void next(){
                 Char2speech.text = "";
         }
        else if (primeInt == 4){
+		   ArtChar1a.SetActive(false);
+		   ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
                 Char2speech.text = "Mom had to go and get more candy to hand out.";
         }
-       else if (primeInt == 5){
+       else if (primeInt == 5){		   
+	   ArtChar1a.SetActive(true);
+		   ArtChar1b.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -148,6 +152,8 @@ public void next(){
 		
 	// after choice 1 is complete	
        else if (primeInt == 40){
+		   ArtChar1a.SetActive(false);
+		   ArtChar1b.SetActive(true);
 		   ArtBG1.SetActive(false);
 		   ArtBG2.SetActive(true);
                 Char1name.text = "";
@@ -176,6 +182,8 @@ public void next(){
 		
 	// after choice 2 is complete		
 		 else if (primeInt == 50){
+			ArtChar1a.SetActive(true);
+		   ArtChar1b.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
