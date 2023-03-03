@@ -13,6 +13,13 @@ public class GameHandler : MonoBehaviour {
 		public static bool isWolf = false;
 
 
+		public static bool siblingGone = false;
+		public static bool sawNPCHouse = false;
+		public static bool sawGhostHouse = false;
+		public static bool sawPartyHouse = false;
+										
+
+
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer mixer;

@@ -86,6 +86,7 @@ void Update(){         // use spacebar as Next button
                        next();
                 }
         }
+		
    }
 
 //Story Units! This is the main story function. Players hit [NEXT] to progress to the next primeInt:

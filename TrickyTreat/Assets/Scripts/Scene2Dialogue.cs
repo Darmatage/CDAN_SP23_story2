@@ -34,6 +34,7 @@ public class Scene2Dialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
 		public GameObject NextScene3Button;
+		public GameObject NextScene4Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -62,6 +63,7 @@ void Start(){
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
 		NextScene3Button.SetActive(false);
+		NextScene4Button.SetActive(false);
         nextButton.SetActive(true);
 
     if (GameHandler.isSuper == true){
@@ -80,10 +82,15 @@ void Start(){
    }
 
 void Update(){         // use spacebar as Next button
-        if (allowSpace == true){
+        
+		// if (GameHandler.siblingGone){
+			// primeInt=49;
+		// }
+		
+		if (allowSpace == true){
                 if (Input.GetKeyDown("space")){
                        next();
-                }
+                }		
         }
    }
 
@@ -164,22 +171,91 @@ public void next(){
 		
 		
 		
-	// after choice 1 is complete	
-       else if (primeInt == 40){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "SIBLING";
-                Char2speech.text = "See ya squirt.";
-				// Turn off "Next" button, turn on "Choice" buttons
+	// after choice 1 is complete
+
+	else if (primeInt==40){
+		ArtChar1a.SetActive(true);
+		ArtChar1b.SetActive(false);
+			 Char1name.text = "";
+             Char1speech.text = "";
+             Char2name.text = "SIBLING";
+             Char2speech.text = "See ya squirt";
+			 
+			// GameHandler.siblingGone = true;
+		}
+	
+       else if (primeInt == 41){
 				ArtChar1a.SetActive(false);
 				ArtChar1b.SetActive(false);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				// Turn off "Next" button, turn on "Choice" buttons
                 DialogueDisplay.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
-                NextScene1Button.SetActive(true);
-				NextScene2Button.SetActive(true);
-				NextScene3Button.SetActive(true);
+				
+				if (GameHandler.sawNPCHouse == false){NextScene1Button.SetActive(true);}
+				if (GameHandler.sawGhostHouse == false){NextScene2Button.SetActive(true);}
+				if (GameHandler.sawPartyHouse == false){NextScene3Button.SetActive(true);}
+				
+				if ((GameHandler.sawNPCHouse)&&(GameHandler.sawGhostHouse)&&(GameHandler.sawPartyHouse)){
+					Char1name.text = "YOU";
+					Char1speech.text = "So, been to all three houses...";					
+
+					DialogueDisplay.SetActive(true);
+					nextButton.SetActive(true);
+					allowSpace = true;
+					primeInt=59;
+				}
+				
         }
+		
+		
+		else if (primeInt==50){
+			ArtChar1a.SetActive(false);
+			 Char1name.text = "YOU";
+             Char1speech.text = "Back on the street.";
+             Char2name.text = "";
+             Char2speech.text = "";
+		}
+		else if (primeInt==51){
+			 Char1name.text = "YOU";
+             Char1speech.text = "Where next?.";
+             Char2name.text = "";
+             Char2speech.text = "";
+			 primeInt = 40;
+		}		
+		
+		
+		else if (primeInt==60){
+			ArtChar1a.SetActive(false);
+			 Char1name.text = "YOU";
+             Char1speech.text = "Huh. Was that path always there?";
+             Char2name.text = "";
+             Char2speech.text = "";
+		}
+		else if (primeInt==61){
+			 Char1name.text = "YOU";
+             Char1speech.text = "Is that... another house?";
+             Char2name.text = "";
+             Char2speech.text = "";
+			 primeInt = 40;
+		}	
+		else if (primeInt==62){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				// Turn off "Next" button, turn on "Choice" buttons
+                DialogueDisplay.SetActive(false);
+                nextButton.SetActive(false);
+                allowSpace = false;
+				NextScene4Button.SetActive(true);
+		}
+		
+		
        // else if (primeInt ==41){
                 // Char1name.text = "YOU";
                 // Char1speech.text = "WOAH!";
@@ -350,5 +426,8 @@ public void next(){
         }
 		public void SceneChange3(){
                 SceneManager.LoadScene("Scene3c");
+        }
+		public void SceneChange4(){
+                SceneManager.LoadScene("Scene6");
         }
 }
