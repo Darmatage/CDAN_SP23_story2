@@ -128,7 +128,19 @@ MonoBehaviour:
   m_Value: 0.4
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &162673611136871220
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +299,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 600, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &162673611810751186
 CanvasRenderer:
@@ -516,8 +528,8 @@ RectTransform:
   m_Father: {fileID: 162673611129152974}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.39994, y: 0}
+  m_AnchorMax: {x: 0.39994, y: 1}
   m_AnchoredPosition: {x: 2.0012054, y: 0}
   m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -571,12 +583,12 @@ GameObject:
   - component: {fileID: 162673612413464578}
   - component: {fileID: 162673612413464579}
   m_Layer: 5
-  m_Name: PAUSEMENUE
+  m_Name: PAUSEMENU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &162673612413464636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -670,7 +682,7 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.39994, y: 1}
   m_AnchoredPosition: {x: 1.0006104, y: 0}
   m_SizeDelta: {x: 2.0012054, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -911,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7375367476003342153, guid: 79a666bd9b252b84b8c8049aaa05137b, type: 3}
       propertyPath: m_Name
-      value: ButtonMENUS (2)
+      value: ButtonQUIT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a666bd9b252b84b8c8049aaa05137b, type: 3}

@@ -97,9 +97,13 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-			if (GameHandler.isSuper == true){
-			primeInt = 3;
-			}
+			GameHandler.sawGhostHouse = true;
+				DialogueDisplay.SetActive(true);
+                Char1name.text = "YOU";
+                Char1speech.text = "Trick or Treat!";
+                Char2name.text = "";
+                Char2speech.text = "";
+			
 			if (GameHandler.isGhost == true){
 			primeInt = 99;
 			}
@@ -109,30 +113,22 @@ public void next(){
         }
 		
 		// SUPER ROUTE
-       else if (primeInt == 4){
-		        ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Trick or Treat!";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 5){
-		   		ArtChar1a.SetActive(false);
-				ArtChar1b.SetActive(true);
+       else if (primeInt == 3){
+		    StartCoroutine(FadeIn(ArtChar1b));
+			ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "GHOST";
-                Char2speech.text = "Hello little one, what an odd costume.";
+                Char2speech.text = "Hello little one. What an odd costume.";
         }
-		else if (primeInt == 6){
+		else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "GHOST";
                 Char2speech.text = "What are you supposed to be?";
 		}
 		
-		else if (primeInt == 7){
+		else if (primeInt == 5){
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -149,9 +145,10 @@ public void next(){
 		
 		
 		
-		//if monster
-			else if (primeInt == 100){
-				ArtChar1a.SetActive(true);
+		//if wearing monster costume:
+		else if (primeInt == 100){
+			StartCoroutine(FadeIn(ArtChar1a));
+			ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Trick or treat!";
@@ -338,6 +335,8 @@ public void next(){
 	//after choice 2 is complete	
 // button to go back to street	
 		 else if (primeInt == 700){
+			GameHandler.candy += 1;
+GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -433,19 +432,7 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "Ghost";
 				Char2speech.text = "bye lady!";
-	   }
-	     else if (primeInt == 1102){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-				Char2speech.text = "";
-				ArtChar1b.SetActive(false);
-				ArtChar1a.SetActive(false);
-				ArtChar1c.SetActive(false);
-                DialogueDisplay.SetActive(false);
-                nextButton.SetActive(false);
-                allowSpace = false;
-				NextScene2Button.SetActive(true);
+				primeInt = 699;
 	   }
 
 
@@ -576,6 +563,31 @@ public void next(){
 		public void SceneChange3(){
                 SceneManager.LoadScene("Scene4a");
         }
+		
+		
+		 IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+		
+		
 }
 
 //add story choice 3a and 3b. ghost route is 900. change her pose, finiah ghost route, figure out the pause thing

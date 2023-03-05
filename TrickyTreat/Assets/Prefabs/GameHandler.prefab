@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7765084180538914754}
   - component: {fileID: 4281198367494342420}
+  - component: {fileID: 5075583603218134707}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -44,3 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8b8ea97b1b435499d6cd310b15ac37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  mixer: {fileID: 24100000, guid: f1e3f2195b17bca46a733aaa36e31333, type: 2}
+--- !u!114 &5075583603218134707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454176275507404071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dee040521ed3e488ff3639c8d19a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candyBag0: {fileID: 0}
+  candyBag1: {fileID: 0}
+  candyBag2: {fileID: 0}
+  candyBag3: {fileID: 0}
+  candyCount: {fileID: 0}

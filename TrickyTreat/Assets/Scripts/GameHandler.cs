@@ -7,7 +7,13 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-        public static int candy;
+        public static int candy = 0;
+		// public GameObject candyBag0;
+		// public GameObject candyBag1;
+		// public GameObject candyBag2;
+		// public GameObject candyBag3;
+		// public Text candyCount;
+		
 		public static bool isSuper = false;
 		public static bool isGhost = false;
 		public static bool isWolf = false;
@@ -19,12 +25,14 @@ public class GameHandler : MonoBehaviour {
 		public static bool sawPartyHouse = false;
 										
 
-
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
+
+		
+
 
         void Awake(){
                 SetLevel (volumeLevel);
@@ -38,6 +46,12 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
+				
+				// candyBag0.SetActive(true);
+				// candyBag1.SetActive(false);
+				// candyBag2.SetActive(false);
+				// candyBag3.SetActive(false);
+				// UpdateCandy ();
         }
 
         void Update(){
@@ -50,6 +64,26 @@ public class GameHandler : MonoBehaviour {
                         }
                 }
         }
+
+		// void UpdateCandy () {
+			// Text candyTemp = candyCount.GetComponent<Text>();
+			// candyTemp.text = "" + (candy * 10); 
+			
+			// if (candy == 1){
+				// candyBag0.SetActive(false);
+				// candyBag1.SetActive(true);
+			// } else if (candy == 2){
+				// candyBag0.SetActive(false);
+				// candyBag1.SetActive(false);
+				// candyBag2.SetActive(true);
+			// } else if (candy == 3){
+				// candyBag0.SetActive(false);
+				// candyBag1.SetActive(false);
+				// candyBag2.SetActive(false);
+				// candyBag3.SetActive(true);
+			// }
+		// }
+
 
         void Pause(){
                 pauseMenuUI.SetActive(true);
@@ -79,6 +113,17 @@ public class GameHandler : MonoBehaviour {
         public void RestartGame(){
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenu");
+					
+				candy = 0;
+				isSuper = false;
+				isGhost = false;
+				isWolf = false;
+
+				siblingGone = false;
+				sawNPCHouse = false;
+				sawGhostHouse = false;
+				sawPartyHouse = false;
+				
         }
 
         public void QuitGame(){

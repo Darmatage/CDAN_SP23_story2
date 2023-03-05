@@ -102,9 +102,13 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-			if (GameHandler.isSuper == true){
-			primeInt = 3;
-			}
+			GameHandler.sawPartyHouse = true;
+				DialogueDisplay.SetActive(true);
+                Char1name.text = "YOU";
+                Char1speech.text = "Trick or Treat!";
+                Char2name.text = "";
+                Char2speech.text = "";
+			
 			if (GameHandler.isGhost == true){
 			primeInt = 99;
 			}
@@ -114,7 +118,7 @@ public void next(){
         }
 		
 		// SUPER ROUTE
-       else if (primeInt == 4){
+       else if (primeInt == 3){
 		        ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
@@ -122,19 +126,19 @@ public void next(){
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-       else if (primeInt == 5){
+       else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
                 Char2speech.text = "Nice human costume.";
         }
-		else if (primeInt == 6){
+		else if (primeInt == 5){
                 Char1name.text = "YOU";
                 Char1speech.text = "Human costume?";
                 Char2name.text = "";
                 Char2speech.text = "";
 		}
-		else if (primeInt == 7){
+		else if (primeInt == 6){
 				ArtChar1a.SetActive(false);
 				ArtChar1d.SetActive(true);
                 Char1name.text = "";
@@ -143,7 +147,7 @@ public void next(){
                 Char2speech.text = "Yeah, it's pretty radical bro.";
 		}
 		
-		else if (primeInt == 8){
+		else if (primeInt == 7){
 				ArtChar1a.SetActive(true);
 				ArtChar1d.SetActive(false);
                 Char1name.text = "YOU";
@@ -321,6 +325,8 @@ public void next(){
 	//after choice 2 is complete	
 // button to go back to street	
 		 else if (primeInt == 700){
+			  GameHandler.candy += 1;
+GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();			  
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -328,6 +334,8 @@ public void next(){
 				ArtChar1b.SetActive(false);
 				ArtChar1a.SetActive(false);
 				ArtChar1c.SetActive(false);
+				ArtChar1d.SetActive(false);
+				ArtChar1e.SetActive(false);				
                 DialogueDisplay.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -412,21 +420,24 @@ public void next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
-				Char2speech.text = "Aw bumper dude. Well hey there's always next year if your still down to party";
+				Char2speech.text = "Aw bummer dude. Well hey there's always next year if your still down to party";
+			primeInt = 699;
 	   }
-	     else if (primeInt == 1101){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-				Char2speech.text = "";
-				ArtChar1b.SetActive(false);
-				ArtChar1a.SetActive(false);
-				ArtChar1c.SetActive(false);
-                DialogueDisplay.SetActive(false);
-                nextButton.SetActive(false);
-                allowSpace = false;
-				NextScene2Button.SetActive(true);
-	   }
+	     // else if (primeInt == 1101){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "";
+				// Char2speech.text = "";
+				// ArtChar1b.SetActive(false);
+				// ArtChar1a.SetActive(false);
+				// ArtChar1c.SetActive(false);
+				// ArtChar1d.SetActive(false);
+				// ArtChar1e.SetActive(false);
+                // DialogueDisplay.SetActive(false);
+                // nextButton.SetActive(false);
+                // allowSpace = false;
+				// NextScene2Button.SetActive(true);
+	   // }
 
 
 // after 3b

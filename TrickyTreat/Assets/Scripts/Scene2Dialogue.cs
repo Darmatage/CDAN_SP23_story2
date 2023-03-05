@@ -79,13 +79,13 @@ void Start(){
 		Frame2Wolf.SetActive(true);
 	}
 	
+	if (GameHandler.siblingGone){
+			primeInt = 49;
+	}
+	
    }
 
 void Update(){         // use spacebar as Next button
-        
-		// if (GameHandler.siblingGone){
-			// primeInt=49;
-		// }
 		
 		if (allowSpace == true){
                 if (Input.GetKeyDown("space")){
@@ -101,7 +101,6 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Where are we? I thought you said we were going trick or treating?";
@@ -109,6 +108,7 @@ public void next(){
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
+		    ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -170,7 +170,6 @@ public void next(){
 		}
 		
 		
-		
 	// after choice 1 is complete
 
 	else if (primeInt==40){
@@ -181,8 +180,8 @@ public void next(){
              Char2name.text = "SIBLING";
              Char2speech.text = "See ya squirt";
 			 
-			// GameHandler.siblingGone = true;
-		}
+		GameHandler.siblingGone = true;
+	}
 	
        else if (primeInt == 41){
 				ArtChar1a.SetActive(false);
@@ -202,7 +201,7 @@ public void next(){
 				
 				if ((GameHandler.sawNPCHouse)&&(GameHandler.sawGhostHouse)&&(GameHandler.sawPartyHouse)){
 					Char1name.text = "YOU";
-					Char1speech.text = "So, been to all three houses...";					
+					Char1speech.text = "Oh, I've been to all three houses...";					
 
 					DialogueDisplay.SetActive(true);
 					nextButton.SetActive(true);
@@ -214,9 +213,10 @@ public void next(){
 		
 		
 		else if (primeInt==50){
-			ArtChar1a.SetActive(false);
+			DialogueDisplay.SetActive(true);
+			//ArtChar1a.SetActive(false);
 			 Char1name.text = "YOU";
-             Char1speech.text = "Back on the street.";
+             Char1speech.text = "OK. Back on the street.";
              Char2name.text = "";
              Char2speech.text = "";
 		}
@@ -241,7 +241,6 @@ public void next(){
              Char1speech.text = "Is that... another house?";
              Char2name.text = "";
              Char2speech.text = "";
-			 primeInt = 40;
 		}	
 		else if (primeInt==62){
                 Char1name.text = "";
@@ -255,94 +254,7 @@ public void next(){
 				NextScene4Button.SetActive(true);
 		}
 		
-		
-       // else if (primeInt ==41){
-                // Char1name.text = "YOU";
-                // Char1speech.text = "WOAH!";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-				// primeInt = 49;
-        // }
-       // else if (primeInt == 42){
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-                // Char2speech.text = "Stop wasting time and go pick one.";
-                //Turn off "Next" button, turn on "Choice" buttons
-                // nextButton.SetActive(false);
-                // allowSpace = false;
-                // Choice2a.SetActive(true); // function Choice2aFunct()
-                // Choice2b.SetActive(true); // function Choice2bFunct()
-				// Choice2c.SetActive(true); // function Choice2cFunct()
-        // }
-		
-	// after choice 2 is complete		
-		 // else if (primeInt == 50){
-			// ArtChar1a.SetActive(false);
-			// ArtChar1b.SetActive(true);
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-						
-			// if (GameHandler.isSuper == true){
-			// Char2speech.text = "Ok, Superface. Try not get to get kidnapped.";
-			// }
-			// if (GameHandler.isGhost == true){
-			// Char2speech.text = "Alright, sheets-a-lot. See you when I see you.";
-			// }
-			// if (GameHandler.isWolf == true){
-			// Char2speech.text = "Alright, fuzzy. Don't forget-- I get half your candy.";
-			// }
-		// }
-		 
-       // else if (primeInt ==51){
-		   // ArtChar1b.SetActive(false);
-                // Char1name.text = "YOU";
-                // Char1speech.text = "Huh. Which house should I try first?";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-		 
-				// Turn off "Next" button, turn on "Choice" buttons
-                // nextButton.SetActive(false);
-                // allowSpace = false;
-                // NextScene1Button.SetActive(true);
-				// NextScene2Button.SetActive(true);
-				// NextScene3Button.SetActive(true);
-        // }
-
-// ENCOUNTER AFTER CHOICE #2
-       // else if (primeInt == 300){
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-                // Char2speech.text = "Wait 'til you hit puberty, atomic face.";
-				// primeInt=49;
-        // }
-
-		// else if (primeInt == 400){
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-				// Char2speech.text = "Oh, wow. SO scary.";
-	   // }
-	   		// else if (primeInt == 401){
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-				// Char2speech.text = "Cut it out, twerp.";
-				// primeInt=49;
-	   // }
-		
-		
-       // else if (primeInt == 500){
-                // Char1name.text = "";
-                // Char1speech.text = "";
-                // Char2name.text = "SIBLING";
-				// Char2speech.text = "Sure, twerp. Just not in front of my friends.";
-				// primeInt=49;
-	   // }
-
-		
+	
 	// never delete the bracket below here. it en ds the next() function!:
      }
 
@@ -369,53 +281,6 @@ public void next(){
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
-		
-		// public void Choice2aFunct(){
-                // FrameSuper.SetActive(true);
-				// Frame2Super.SetActive(true);
-				// GameHandler.isSuper = true;
-				// Char1name.text = "YOU";
-                // Char1speech.text = "I’m gonna be super! Like captain atomic face!";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-                // primeInt = 299;
-                // Choice2a.SetActive(false);
-                // Choice2b.SetActive(false);
-				// Choice2c.SetActive(false);
-                // nextButton.SetActive(true);
-                // allowSpace = true;
-        // }
-        // public void Choice2bFunct(){
-			// FrameGhost.SetActive(true);
-			// Frame2Ghost.SetActive(true);
-				// GameHandler.isGhost = true;
-                // Char1name.text = "YOU";
-                // Char1speech.text = "Boo! Were you scared?";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-                // primeInt = 399;
-                // Choice2a.SetActive(false);
-                // Choice2b.SetActive(false);
-				// Choice2c.SetActive(false);
-                // nextButton.SetActive(true);
-                // allowSpace = true;
-        // }
-        // public void Choice2cFunct(){
-			// FrameWolf.SetActive(true);
-			// Frame2Wolf.SetActive(true);
-				// GameHandler.isWolf = true;
-                // Char1name.text = "YOU";
-                // Char1speech.text = "What does a wolf say? Woof?";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-                // primeInt = 499;
-                // Choice2a.SetActive(false);
-                // Choice2b.SetActive(false);
-				// Choice2c.SetActive(false);
-                // nextButton.SetActive(true);
-                // allowSpace = true;
-        // }
-		
 		
 
         public void SceneChange1(){
