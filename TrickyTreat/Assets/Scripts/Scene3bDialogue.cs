@@ -150,18 +150,12 @@ public void next(){
 			StartCoroutine(FadeIn(ArtChar1a));
 			ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Trick or treat!";
-                Char2name.text = "";
-                Char2speech.text = "";
-		}
-			else if (primeInt == 101){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Ghost";
                 Char2speech.text = "Hello dear, well aren't you a cutie-pie!";
 		}
-		else if (primeInt == 102){
+		else if (primeInt == 101){
 				ArtChar1a.SetActive(false);
 				ArtChar1b.SetActive(true);
                 Char1name.text = "";
@@ -169,7 +163,7 @@ public void next(){
                 Char2name.text = "Ghost";
                 Char2speech.text = "Haven't seen you around here before. Where are your parents, dear? Do you not have any, are you alone?";
 		}
-				else if (primeInt == 103){
+				else if (primeInt == 102){
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";

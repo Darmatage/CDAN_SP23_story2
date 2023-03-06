@@ -121,24 +121,18 @@ public void next(){
        else if (primeInt == 3){
 		        ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Trick or Treat!";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
                 Char2speech.text = "Nice human costume.";
         }
-		else if (primeInt == 5){
+		else if (primeInt == 4){
                 Char1name.text = "YOU";
                 Char1speech.text = "Human costume?";
                 Char2name.text = "";
                 Char2speech.text = "";
 		}
-		else if (primeInt == 6){
+		else if (primeInt == 5){
 				ArtChar1a.SetActive(false);
 				ArtChar1d.SetActive(true);
                 Char1name.text = "";
@@ -147,7 +141,7 @@ public void next(){
                 Char2speech.text = "Yeah, it's pretty radical bro.";
 		}
 		
-		else if (primeInt == 7){
+		else if (primeInt == 6){
 				ArtChar1a.SetActive(true);
 				ArtChar1d.SetActive(false);
                 Char1name.text = "YOU";
@@ -170,18 +164,12 @@ public void next(){
 			else if (primeInt == 100){
 				ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Trick or treat!";
-                Char2name.text = "";
-                Char2speech.text = "";
-		}
-			else if (primeInt == 101){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "PARTY GUY";
                 Char2speech.text = "Hey little dude! Drinks are on the table, take what you want.";
 		}
-		else if (primeInt == 102){
+		else if (primeInt == 101){
 				ArtChar1a.SetActive(false);
 				ArtChar1e.SetActive(true);
                 Char1name.text = "";
@@ -189,7 +177,7 @@ public void next(){
                 Char2name.text = "PARTY GUY";
                 Char2speech.text = "Oh wait, you're a kid! Sorry kid, uh what do you want? Candy? I think I’ve got some candy here.";
 		}
-				else if (primeInt == 103){
+				else if (primeInt == 102){
 				ArtChar1a.SetActive(true);
 				ArtChar1e.SetActive(false);
                 Char1name.text = "YOU";
@@ -324,9 +312,7 @@ public void next(){
 		
 	//after choice 2 is complete	
 // button to go back to street	
-		 else if (primeInt == 700){
-			  GameHandler.candy += 1;
-GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();			  
+		 else if (primeInt == 700){			  
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -375,6 +361,8 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
 
 // After monster talk choices
 		else if (primeInt == 350){
+			GameHandler.candy += 1;
+GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();
 				ArtChar1a.SetActive(true);
 				ArtChar1d.SetActive(false);
 				ArtChar1e.SetActive(false);
@@ -567,7 +555,7 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
                 SceneManager.LoadScene("Scene2");
         }
 		public void SceneChange3(){
-                SceneManager.LoadScene("Scene4a");
+                SceneManager.LoadScene("Scene4b");
         }
 }
 

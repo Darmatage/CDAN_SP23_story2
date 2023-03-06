@@ -111,35 +111,26 @@ public void next(){
 			}
         }
        else if (primeInt == 3){
-		        ArtChar1a.SetActive(true);
-                DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Trick or Treat!";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 4){
-		   		ArtChar1a.SetActive(false);
 				ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "NPC";
                 Char2speech.text = "Seasons greetings-. What an odd costume…?";
         }
-		else if (primeInt == 5){
+		else if (primeInt == 4){
                 Char1name.text = "YOU";
                 Char1speech.text = "Thanks! It's a hand-me-down.";
                 Char2name.text = "";
                 Char2speech.text = "";
 		}
-		else if (primeInt == 6){
+		else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "NPC";
                 Char2speech.text = "You know, not a lot of monster kids like superheroes.";
 		}
 		
-		else if (primeInt == 7){
+		else if (primeInt == 6){
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";
