@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
+	
+		public Texture2D cursorArrow;
 
         public static int candy = 0;
 		// public GameObject candyBag0;
@@ -46,6 +48,7 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
+				Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
 				
 				// candyBag0.SetActive(true);
 				// candyBag1.SetActive(false);
