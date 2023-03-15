@@ -16,6 +16,7 @@ public class Scene5Dialogue : MonoBehaviour {
         public GameObject DialogueDisplay;
         public GameObject ArtChar1a;
        public GameObject ArtChar1b;
+	          public GameObject ArtChar1c;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
 		//public GameObject ArtBG2;
@@ -44,6 +45,7 @@ void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
 		ArtChar1b.SetActive(false);
+				ArtChar1c.SetActive(false);
 		
         ArtBG1.SetActive(true);
 		//ArtBG2.SetActive(false);
@@ -154,7 +156,7 @@ public void next(){
 		}
 		else if (primeInt==31){
 				ArtChar1a.SetActive(false);
-				ArtChar1b.SetActive(true);
+				ArtChar1c.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "GHOST";
@@ -162,7 +164,7 @@ public void next(){
 		}
 		else if (primeInt==32){
 				ArtChar1a.SetActive(true);
-				ArtChar1b.SetActive(false);
+				ArtChar1c.SetActive(false);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "GHOST";

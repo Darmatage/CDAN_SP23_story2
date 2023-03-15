@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End_Win.unity
     guid: 4388b62f7131042b3a16b4c91b6fb9f5
+  - enabled: 1
+    path: Assets/Scenes/ADOPTION.unity
+    guid: 2dab290820b242f4d9d7efac1950d1aa
+  - enabled: 1
+    path: Assets/Scenes/MONSTER.unity
+    guid: bf81f4f2c99f33c4b92cd004e9ed23e0
   m_configObjects: {}

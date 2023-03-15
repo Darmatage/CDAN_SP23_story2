@@ -17,6 +17,7 @@ public class Scene3bDialogue : MonoBehaviour {
         public GameObject ArtChar1a;
        public GameObject ArtChar1b;
        public GameObject ArtChar1c;
+	    public GameObject ArtChar1d;
         public GameObject ArtBG1;
 		//public GameObject ArtBG2;
 		public GameObject FrameSuper;
@@ -46,6 +47,7 @@ void Start(){
         ArtChar1a.SetActive(false);
 		ArtChar1b.SetActive(false);
 		ArtChar1c.SetActive(false);
+		ArtChar1d.SetActive(false);
 		
         ArtBG1.SetActive(true);
 		//ArtBG2.SetActive(false);
@@ -255,6 +257,8 @@ public void next(){
 			
 			//Response to choice 2b
 			else if (primeInt==400){
+			ArtChar1b.SetActive(false);
+			ArtChar1d.SetActive(true);
 			 Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "GHOST";
@@ -329,8 +333,6 @@ public void next(){
 	//after choice 2 is complete	
 // button to go back to street	
 		 else if (primeInt == 700){
-			GameHandler.candy += 1;
-GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -377,7 +379,10 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
 
 // After monster talk choices
 		else if (primeInt == 350){
+			GameHandler.candy += 1;
+GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().UpdateCandy();
 				ArtChar1b.SetActive(false);
+				ArtChar1d.SetActive(false);
 				ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -584,4 +589,4 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
 		
 }
 
-//add story choice 3a and 3b. ghost route is 900. change her pose, finiah ghost route, figure out the pause thing
+//candy
