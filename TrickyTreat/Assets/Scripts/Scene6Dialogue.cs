@@ -43,7 +43,7 @@ public class Scene6Dialogue : MonoBehaviour {
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
         DialogueDisplay.SetActive(false);
-        ArtChar1a.SetActive(false);
+        ArtChar1a.SetActive(true);
 		ArtChar1b.SetActive(false);
 		ArtChar1c.SetActive(false);
         ArtBG1.SetActive(true);
