@@ -425,7 +425,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: After getting home safe, your mom had a long discustion with you and your
+  m_Text: After getting home safe, your mom had a long discussion with you and your
     older sibling. As a punshment she's going to take all your candy, and ground
     your sibling.
 --- !u!222 &784552155
@@ -655,6 +655,18 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 162673612299031617, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 162673612299031617, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 162673612299031617, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 162673612413464636, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -742,6 +754,14 @@ PrefabInstance:
     - target: {fileID: 162673612413464637, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
       propertyPath: m_Name
       value: PAUSEMENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 162673612425152923, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 162673612425152923, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213499335093751729, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

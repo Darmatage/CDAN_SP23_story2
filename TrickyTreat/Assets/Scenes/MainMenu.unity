@@ -693,6 +693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PAUSEMENUE
       objectReference: {fileID: 0}
+    - target: {fileID: 162673612413464637, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 162673612425152923, guid: f63c6e86e9d03cd43ab73f7b2e8b033d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -952,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5284354, g: 0.8962264, b: 0.82160217, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

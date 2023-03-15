@@ -2583,6 +2583,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2197207026766130139, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197207026766130139, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2197207026766130141, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2598,6 +2606,14 @@ PrefabInstance:
     - target: {fileID: 2197207026850111836, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197207027130747449, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197207027130747449, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2197207027130747451, guid: 2fd453187fe6f334089d64bf5ddce45c, type: 3}
       propertyPath: m_IsActive
