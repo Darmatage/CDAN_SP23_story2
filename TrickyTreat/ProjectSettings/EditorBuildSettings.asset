@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/old/SceneRed3b.unity
     guid: 3089f531c5c86a647afd497112e600d8
   - enabled: 1
+    path: Assets/Scenes/CANDY.unity
+    guid: 45ab5651a8eafb048b7f8f913a7bc7ba
+  - enabled: 1
     path: Assets/Scenes/DEATH.unity
     guid: f619a065486040147aae5961e432bcec
   - enabled: 1
