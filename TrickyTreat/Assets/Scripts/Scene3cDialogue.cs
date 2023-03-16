@@ -7,7 +7,8 @@ using UnityEngine.Audio;
 
 public class Scene3cDialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
+              public AudioSource SFXClip1;
+	   public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
@@ -102,12 +103,18 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+				if (Input.GetKeyDown("space")){
+                       next();
+                }
 			GameHandler.sawPartyHouse = true;
 				DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Trick or Treat!";
                 Char2name.text = "";
                 Char2speech.text = "";
+								ArtChar1a.SetActive(false);
+						        ArtChar1b.SetActive(false);
+								ArtChar1c.SetActive(false);
 			
 			if (GameHandler.isGhost == true){
 			primeInt = 99;
@@ -120,6 +127,8 @@ public void next(){
 		// SUPER ROUTE
        else if (primeInt == 3){
 		        ArtChar1a.SetActive(true);
+						        ArtChar1b.SetActive(false);
+								ArtChar1c.SetActive(false);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -163,6 +172,8 @@ public void next(){
 		//if monster
 			else if (primeInt == 100){
 				ArtChar1a.SetActive(true);
+						        ArtChar1b.SetActive(false);
+								ArtChar1c.SetActive(false);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";

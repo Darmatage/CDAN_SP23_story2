@@ -222,7 +222,7 @@ public void next(){
 		}
 		else if (primeInt==51){
 			 Char1name.text = "YOU";
-             Char1speech.text = "Where next?.";
+             Char1speech.text = "Where next?";
              Char2name.text = "";
              Char2speech.text = "";
 			 primeInt = 40;

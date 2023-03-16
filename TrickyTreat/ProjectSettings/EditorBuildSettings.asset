@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MONSTER.unity
     guid: bf81f4f2c99f33c4b92cd004e9ed23e0
+  - enabled: 1
+    path: Assets/Scenes/PARTYANIMAL.unity
+    guid: 6f14e9ef626cc4e4991a7c8c89deb228
+  - enabled: 1
+    path: Assets/Scenes/SCOLD.unity
+    guid: 6d0b3e0776d40f944bd93b2e3c243718
   m_configObjects: {}

@@ -7,7 +7,8 @@ using UnityEngine.Audio;
 
 public class Scene3aDialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
+       public AudioSource SFXClip1;
+	   public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
@@ -18,7 +19,7 @@ public class Scene3aDialogue : MonoBehaviour {
        public GameObject ArtChar1b;
        public GameObject ArtChar1c;
         public GameObject ArtBG1;
-		//public GameObject ArtBG2;
+		public GameObject ArtBG2;
 		public GameObject FrameSuper;
 		public GameObject FrameGhost;
 		public GameObject FrameWolf;
@@ -46,8 +47,8 @@ void Start(){
 		ArtChar1b.SetActive(false);
 		ArtChar1c.SetActive(false);
 		
-        ArtBG1.SetActive(true);
-		//ArtBG2.SetActive(false);
+        ArtBG1.SetActive(false);
+		ArtBG2.SetActive(true);
 		FrameSuper.SetActive(false);
 		FrameGhost.SetActive(false);
 		FrameWolf.SetActive(false);
@@ -96,13 +97,20 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+			   if (Input.GetKeyDown("space")){
+                       next();
+                }
 			GameHandler.sawNPCHouse = true;
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Trick or Treat!";
                 Char2name.text = "";
                 Char2speech.text = "";
-			
+							ArtChar1a.SetActive(false);
+							ArtChar1b.SetActive(false);
+							ArtChar1c.SetActive(false);
+			        ArtBG1.SetActive(false);
+					ArtBG2.SetActive(true);
 			if (GameHandler.isGhost == true){
 				primeInt = 99;
 			}
@@ -111,10 +119,14 @@ public void next(){
 			}
         }
        else if (primeInt == 3){
+		ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
+						ArtChar1c.SetActive(false);
+										ArtChar1a.SetActive(false);
 				ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "Seasons greetings-. What an odd costume…?";
         }
 		else if (primeInt == 4){
@@ -126,7 +138,7 @@ public void next(){
 		else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "You know, not a lot of monster kids like superheroes.";
 		}
 		
@@ -147,13 +159,13 @@ public void next(){
 		else if (primeInt==20){
 			 Char1name.text = "";
              Char1speech.text = "";
-             Char2name.text = "NPC";
+             Char2name.text = "DEMON";
              Char2speech.text = "Because in movies superheros beat up on monsters.";
 		}
 		else if (primeInt==21){
 			 Char1name.text = "";
              Char1speech.text = "";
-             Char2name.text = "NPC";
+             Char2name.text = "DEMON";
              Char2speech.text = "But you would know that, if you were one.";
 			primeInt = 39;
 		}
@@ -162,19 +174,19 @@ public void next(){
 		else if (primeInt==30){
 			 Char1name.text = "";
              Char1speech.text = "";
-             Char2name.text = "NPC";
+             Char2name.text = "DEMON";
              Char2speech.text = "Still, I don’t know a lot of monster parents who let their kids around superhero stuff.";
 		}
 		else if (primeInt==31){
 			 Char1name.text = "";
              Char1speech.text = "";
-             Char2name.text = "NPC";
+             Char2name.text = "DEMON";
              Char2speech.text = "Superheros are more of a human thing.";
 		}
 		else if (primeInt==32){
 			 Char1name.text = "";
              Char1speech.text = "";
-             Char2name.text = "NPC";
+             Char2name.text = "DEMON";
              Char2speech.text = "Unless you're a human.";
 			primeInt = 39;
 		}
@@ -193,13 +205,13 @@ public void next(){
 		   		ArtChar1a.SetActive(true);
 	            Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "Silly little human";
 		}
 	   else if (primeInt == 42){
 	            Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "I've been giving out the treats all night,";
 		}
 			   else if (primeInt == 43){
@@ -207,7 +219,7 @@ public void next(){
 		   		ArtChar1c.SetActive(true);
 	            Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "but it seems a treat of my own has wandered onto my doorstep.";
 			   }
 			    else if (primeInt == 44){
@@ -229,16 +241,20 @@ public void next(){
 
 		//if you are dressed as monster:
 		else if (primeInt == 100){
+					ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
 			ArtChar1a.SetActive(true);
+					ArtChar1b.SetActive(false);
+							ArtChar1c.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "OH!.. Season's greetings!";
 		}
 		else if (primeInt == 101){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "I haven't seen you around in our neighborhood before. Where do you hail from?";
 		}
 				else if (primeInt == 102){
@@ -258,7 +274,7 @@ public void next(){
        else if (primeInt == 300){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "You must be Dolores' little nibbling!";
 	   }
 	   	else if (primeInt == 301){
@@ -270,7 +286,7 @@ public void next(){
 		else if (primeInt == 302){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
                 Char2speech.text = "Here you go kid, a nice piece of candy! And say hi to your aunt for me, would you?";
 		}
 		else if (primeInt == 303){
@@ -287,7 +303,7 @@ public void next(){
 				ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
 				Char2speech.text = "... Oh uh, alright.";
 	   }
 	   	else if (primeInt == 401){
@@ -299,7 +315,7 @@ public void next(){
 		else if (primeInt == 402){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "NPC";
+                Char2name.text = "DEMON";
 				Char2speech.text = "Sure, Here's some candy. Don't lose it in the swamps, I guess.";
 				primeInt=349;
 	   }
@@ -383,5 +399,5 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
         }
 		// public void SceneChange3(){
                 // SceneManager.LoadScene("Scene3c");
-        // }
+        // } 
 }

@@ -7,7 +7,8 @@ using UnityEngine.Audio;
 
 public class Scene3bDialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
+            public AudioSource SFXClip1;
+	 public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
@@ -19,6 +20,7 @@ public class Scene3bDialogue : MonoBehaviour {
        public GameObject ArtChar1c;
 	    public GameObject ArtChar1d;
         public GameObject ArtBG1;
+        public GameObject ArtBG2;
 		//public GameObject ArtBG2;
 		public GameObject FrameSuper;
 		public GameObject FrameGhost;
@@ -49,7 +51,8 @@ void Start(){
 		ArtChar1c.SetActive(false);
 		ArtChar1d.SetActive(false);
 		
-        ArtBG1.SetActive(true);
+        ArtBG1.SetActive(false);
+        ArtBG2.SetActive(true);
 		//ArtBG2.SetActive(false);
 		FrameSuper.SetActive(false);
 		FrameGhost.SetActive(false);
@@ -99,12 +102,20 @@ public void next(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+			if (Input.GetKeyDown("space")){
+                       next();
+                }
 			GameHandler.sawGhostHouse = true;
 				DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Trick or Treat!";
                 Char2name.text = "";
                 Char2speech.text = "";
+						ArtChar1b.SetActive(false);
+						ArtChar1a.SetActive(false);
+						ArtChar1c.SetActive(false);
+					ArtBG1.SetActive(false);
+					ArtBG2.SetActive(true);
 			
 			if (GameHandler.isGhost == true){
 			primeInt = 99;
@@ -118,6 +129,10 @@ public void next(){
        else if (primeInt == 3){
 		    StartCoroutine(FadeIn(ArtChar1b));
 			ArtChar1b.SetActive(true);
+						ArtChar1a.SetActive(false);
+						ArtChar1c.SetActive(false);
+			        ArtBG2.SetActive(false);
+					ArtBG1.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "GHOST";
@@ -151,6 +166,10 @@ public void next(){
 		else if (primeInt == 100){
 			StartCoroutine(FadeIn(ArtChar1a));
 			ArtChar1a.SetActive(true);
+						ArtChar1b.SetActive(false);
+						ArtChar1c.SetActive(false);
+					ArtBG2.SetActive(false);
+					ArtBG1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -340,6 +359,7 @@ public void next(){
 				ArtChar1b.SetActive(false);
 				ArtChar1a.SetActive(false);
 				ArtChar1c.SetActive(false);
+				ArtChar1d.SetActive(false);
                 DialogueDisplay.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -421,6 +441,11 @@ GameObject.FindWithTag("GameHandler").GetComponent<GameHandler_CandyBag>().Updat
 			}
 		// choice 3a response
        else if (primeInt == 1100){
+		   		ArtChar1a.SetActive(false);
+				ArtChar1b.SetActive(false);
+				ArtChar1c.SetActive(false);
+				ArtChar1d.SetActive(true);
+		
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Ghost";

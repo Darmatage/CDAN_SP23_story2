@@ -172,6 +172,14 @@ public void next(){
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
                 Char2speech.text = "Stop wasting time and go pick one.";
+        }
+		       else if (primeInt == 43){		   
+				ArtChar1b.SetActive(false);
+				                DialogueDisplay.SetActive(false);
+                Char1name.text = "YOU";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -196,6 +204,7 @@ public void next(){
 
 // ENCOUNTER AFTER CHOICE #2
        else if (primeInt == 300){
+		   ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -204,6 +213,7 @@ public void next(){
         }
 
 		else if (primeInt == 400){
+			ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -219,6 +229,7 @@ public void next(){
 		
 		
        else if (primeInt == 500){
+		   ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "SIBLING";
@@ -258,6 +269,7 @@ public void next(){
                 FrameSuper.SetActive(true);
 				Frame2Super.SetActive(true);
 				GameHandler.isSuper = true;
+				                DialogueDisplay.SetActive(true);
 				Char1name.text = "YOU";
                 Char1speech.text = "I’m gonna be super! Like captain atomic face!";
                 Char2name.text = "";
@@ -273,6 +285,7 @@ public void next(){
 			FrameGhost.SetActive(true);
 			Frame2Ghost.SetActive(true);
 				GameHandler.isGhost = true;
+				                DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Boo! Were you scared?";
                 Char2name.text = "";
@@ -288,6 +301,7 @@ public void next(){
 			FrameWolf.SetActive(true);
 			Frame2Wolf.SetActive(true);
 				GameHandler.isWolf = true;
+				                DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "What does a wolf say? Woof?";
                 Char2name.text = "";
